@@ -1,91 +1,265 @@
-$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-
-@import 'sass-bootstrap/lib/bootstrap';
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* Space out content a bit */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0 auto;
+    color: rgb(66, 64, 64);
+    background-color: rgb(249, 249, 249);
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
+a {
+    color: rgb(169, 54, 23);
+    text-decoration: none;
 }
 
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
-
-    /* Make the masthead heading the same height as the navigation */
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
-    }
+h2, h1 {
+    color: rgb(169, 54, 23);
+    font-weight: 400;
 }
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
+ul {
+    margin: 0;
+    padding: 0;
 }
 
-.container-narrow > hr {
-    margin: 30px 0;
+li {
+    list-style: disc;
+    margin: 0;
+    padding: 0; 
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.my-name {
+    color: rgb(169, 54, 23);
+    font-size: 50px;
+    font-weight: 580;
+    margin-top: 24px;
+}
+
+.quote {
+    font-size: 18px;
     text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-    .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-    }
+    margin-top: 14px;
+    margin-bottom: 38px;
 }
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-    p + h4 {
-        margin-top: 28px;
-    }
+//ABOUT ME BANNER//
+
+.banner {
+    height: 440px;
+    background-color: rgb(229, 227, 227);
+    margin-top: 40px;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
-
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
+.photo-section  {
+    display: inline-block;
 }
+
+.my-photo-box {
+    width: 250px;
+    padding-top: 40px;
+}
+
+.my-photo {
+    width: 180px;
+    border-radius: 50%; 
+    display: block;
+    margin: 0 auto; 
+    margin-bottom: -8px;
+}
+
+.family-photo-box {
+    width: 250px;
+}
+
+.sarah-pic {
+    width: 116px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.boys-pic {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 6px;
+    margin-left: 4px;
+}
+
+.about-me-section {
+    width: 680px;
+    height: 100%;
+    border-radius: 12px;
+    margin: 20px 0 0 20px;
+    float: right;
+    font-size: 18px;
+}
+
+//RESUME BANNER//
+
+.resume-icon {
+    width: 26px;
+    margin-bottom: -4px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.resume-line {
+    width: 100%;
+    display: inline-block;
+}
+
+.resume-line-item {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hidden-what-i-did {
+    margin-left: 90px;
+    list-style-type: disc;
+    display: none;
+    margin-top: 8px;
+}
+
+.hidden-what-i-learned {
+    margin-left: 90px;
+    display: none;
+}
+
+.banner-two {
+    margin-top: 40px;
+}
+
+#skills-icons-list {
+  list-style: none;
+}
+
+//Tooltips Generator//
+
+a.tooltips {
+  position: relative;
+  display: inline;
+}
+
+a.tooltips span {
+  position: absolute;
+  width:130px;
+  color: rgb(66, 64, 64);
+  background: rgb(229, 227, 227);
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 10px;
+}
+
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-top: 8px solid rgb(229, 227, 227);
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+a:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.7;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -76px;
+  z-index: 999;
+}
+
+.skills-banner {
+  height: 500px;
+  background-color: rgb(229, 227, 227);
+  margin-top: 40px;
+}
+
+.skills-heading {
+  padding-top: 30px;
+}
+
+.skills-code {
+  float: left;
+  width: 540px;
+  height: 360px;
+  background-color: rgb(39, 40, 34);
+  border-radius: 4px;
+}
+
+.skills-img {
+  margin-top: 22px;
+  margin-left: 10px;
+}
+
+.skills-other {
+  display: inline-block;
+  margin-left: 60px;
+}
+
+.skills-list {
+  font-size: 18px;  
+}
+
+.skills-icons {
+  margin-left: -30px;
+  padding-right: 16px;
+}
+
+.skills-icons a, h3 {
+  display: inline-block;
+}
+
+#link-instructions {
+  margin-top: -4px;
+}
+
+.github-icon {
+  width: 60px;
+  margin-left: 36px;  
+  margin-top: 30px;  
+}
+
+//Connect With Me//
+
+.contact-info {
+  font-size: 18px;
+}
+
+.email, .phone {
+  list-style: none;
+  margin: 8px;
+}
+
+.contact-icons {
+  margin: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
